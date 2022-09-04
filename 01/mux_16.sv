@@ -9,7 +9,5 @@ module mux_16(
     input         select,
     output [15:0] out
 );
-
-    // Put your code here
-
+  mux f0 [15:0] (a, b, select, out);
 endmodule

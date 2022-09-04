@@ -8,7 +8,5 @@ module and_16(
    input [15:0] b,
    output [15:0] out
 );
-
-    // Put your code here
-
+  and_n2t f0 [15:0] (a, b, out);
 endmodule

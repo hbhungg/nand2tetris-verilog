@@ -7,7 +7,5 @@ module not_16(
     input [15:0] in,
     output [15:0] out
 );
-
-    // Put your code here
-
+  nand f0 [15:0] (out, in, in);
 endmodule
