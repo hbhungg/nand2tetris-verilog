@@ -9,7 +9,8 @@ module dmux(
     output a,
     output b
 );
-
-    // Put your code here
-
+  wire not_s; // Not select
+  not(not_s, s);
+  and_n2t f1 (in, not_s, a);
+  and_n2t f0 (in, select, b);
 endmodule
