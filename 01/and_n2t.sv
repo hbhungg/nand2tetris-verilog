@@ -4,7 +4,7 @@
 `define and_n2t 1
 
 module and_n2t(input a, input b, output out);
-
-    // Put your code here
-
+  wire Yd;
+  nand(Yd, a, b);
+  not(out, Yd);
 endmodule 
