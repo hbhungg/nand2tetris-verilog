@@ -16,6 +16,8 @@ module mux_8_way_16(
     output [15:0] out
 );
 
-    // Put your code here
-
+  wire [15:0] out1, out2;
+  mux_4_way_16 f0 (a, b, c, d, select[1:0], out1);
+  mux_4_way_16 f1 (e, f, g, h, select[1:0], out2);
+  mux_16 f2 (out1, out2, select[2], out);
 endmodule

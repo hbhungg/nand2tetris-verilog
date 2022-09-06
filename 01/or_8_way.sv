@@ -7,7 +7,12 @@ module or_8_way(
     input [7:0] in,
     output      out
 );
-
-    // Put your code here
-
+  wire a, b, c, d, e, f;
+  or_n2t f0 (in[0], in[1], a);
+  or_n2t f1 (a, in[2], b);
+  or_n2t f2 (b, in[3], c);
+  or_n2t f3 (c, in[4], d);
+  or_n2t f4 (d, in[5], e);
+  or_n2t f5 (e, in[6], f);
+  or_n2t f6 (f, in[7], out);
 endmodule

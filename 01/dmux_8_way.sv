@@ -15,7 +15,8 @@ module dmux_8_way(
     output      g,
     output      h
 );
-
-    // Put your code here
-
+  wire out1, out2;
+  dmux f0 (in, select[2], out1, out2);
+  dmux_4_way f1 (out1, select[1:0], a, b, c, d);
+  dmux_4_way f2 (out2, select[1:0], e, f, g, h);
 endmodule
