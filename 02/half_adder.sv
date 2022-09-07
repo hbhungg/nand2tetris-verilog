@@ -9,7 +9,6 @@ module half_adder(
     output carry,
     output sum
 );
-
-    // Put your code here
-
+  xor_n2t f0 (a, b, sum);
+  and_n2t f1 (a, b, carry);
 endmodule

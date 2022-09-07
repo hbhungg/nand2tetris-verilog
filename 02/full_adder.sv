@@ -10,7 +10,10 @@ module full_adder(
     output carry,
     output sum
 );
-
-    // Put your code here
-
+  wire c1, s1, c2;
+  // a + b
+  half_adder f0 (a, b, c1, s1);
+  // a + b + c
+  half_adder f1 (s1, c, c2, sum);
+  or_n2t f2 (c1, c2, carry);
 endmodule
