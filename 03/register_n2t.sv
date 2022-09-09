@@ -9,7 +9,6 @@ module register_n2t(
     input         clk,
     output [15:0] out
 );
-
-    // Put your code here
-
+  // Basically just 16 1-bit reg
+  bit_n2t f0 [15:0] (in, load, clk, out);
 endmodule

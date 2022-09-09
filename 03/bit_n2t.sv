@@ -7,12 +7,11 @@
 `define bit_n2t 1
 
 module bit_n2t(
-    input  in,
-    input  load,
-    input  clk,
-    output out
+  input  in,
+  input  load,
+  input  clk,
+  output out
 );
-
-    // Put your code here
-
+  mux m (out, in, load, out1);
+  dff df (out1, clk, out);
 endmodule
